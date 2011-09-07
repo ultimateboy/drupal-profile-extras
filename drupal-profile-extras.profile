@@ -80,3 +80,19 @@ function PROFILENAME_select_features_form_submit(&$form, &$form_state) {
   // Features_form_submit adds a redirect, we don't want it.
   unset($form_state['redirect']);
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * If you want to alter any site information, such as default
+ * site name, mail, admin account, etc, do so here.
+ * 
+ * Allows the profile to alter the site configuration form.
+ */
+function PROFILENAME_form_install_configure_form_alter(&$form, $form_state) {
+  //$form['site_information']['site_name']['#default_value'] = 'My site name';
+  //$form['site_information']['site_mail']['#default_value'] = 'email@example.com';
+  //$form['admin_account']['account']['name']['#default_value'] = 'admin';
+  //$form['admin_account']['account']['mail']['#default_value'] = 'admin-email@example.com';
+  //$form['server_settings']['site_default_country']['#default_value'] = 'US';
+}
