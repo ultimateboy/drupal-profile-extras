@@ -3,7 +3,7 @@
 // Place in your PROFILENAME.profile file.
 
 /**
- * Set YOURPROFILE as default selected install profile.
+ * Set PROFILENAME as default selected install profile.
  *
  * This is mean, but if you're the only install profile around,
  * it's probably acceptable. I wouldn't recommend committing this
@@ -11,7 +11,7 @@
  */
 function system_form_install_select_profile_form_alter(&$form, $form_state) {
   foreach($form['profile'] as $key => $element) {
-    $form['profile'][$key]['#value'] = 'PROFILE-MACHINE-NAME';
+    $form['profile'][$key]['#value'] = 'PROFILENAME';
   }
 }
 
